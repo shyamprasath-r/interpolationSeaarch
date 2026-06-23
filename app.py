@@ -17,7 +17,12 @@ def interpolation_search(arr, key):
         else:
             high = pos - 1
     return -1
-
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "Interpolation Search API is running",
+        "usage": "/search?n=100&key=50"
+    })
 @app.route("/search")
 def search():
     # Parameters from query string
